@@ -6,26 +6,34 @@ export default function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <Text style={styles.title}>SpotFree</Text>
       <View style={styles.buttonContainer}>
-        <Button
-          title="Adicionar"
-          onPress={() => navigation.navigate('Create')}
-          color="#841584"
-        />
-        <Button
-          title="Procurar"
-          onPress={() => navigation.navigate('Read')}
-          color="#841584"
-        />
-        <Button
-          title="Atualizar"
-          onPress={() => navigation.navigate('Update')}
-          color="#841584"
-        />
-        <Button
-          title="Deletar"
-          onPress={() => navigation.navigate('Delete')}
-          color="#841584"
-        />
+        <View style={styles.button}>
+          <Button
+            title="Adicionar"
+            onPress={() => navigation.navigate('Create')}
+            color="#364D1F"
+          />
+        </View>
+        <View style={styles.button}>
+          <Button
+            title="Procurar"
+            onPress={() => navigation.navigate('Read')}
+            color="#364D1F"
+          />
+        </View>
+        <View style={styles.button}>
+          <Button
+            title="Atualizar"
+            onPress={() => navigation.navigate('Update')}
+            color="#364D1F"
+          />
+        </View>
+        <View style={styles.button}>
+          <Button
+            title="Deletar"
+            onPress={() => navigation.navigate('Delete')}
+            color="#364D1F"
+          />
+        </View>
       </View>
     </View>
   );
@@ -45,7 +53,12 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '100%',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    height: 200,
+    justifyContent: 'space-around', 
+    flexDirection: 'row',
+    flexWrap: 'wrap', 
+  },
+  button: {
+    width: '45%', 
+    marginBottom: 12, 
   },
 });

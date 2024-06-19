@@ -76,7 +76,7 @@ export default function DeleteScreen() {
                 onChangeText={setMusicId}
                 placeholder="Digite o ID da música"
             />
-            <Button title="Deletar" onPress={executa} />
+            <Button title="Deletar" onPress={executa} color="#364D1F"/>
             {error ? <Text style={styles.error}>{error}</Text> : null}
             {exclusao && (
                 <View>

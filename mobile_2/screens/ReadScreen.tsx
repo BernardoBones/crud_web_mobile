@@ -1,4 +1,3 @@
-// screens/ReadScreen.tsx
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, ScrollView } from 'react-native';
 import axios from 'axios';
@@ -77,8 +76,12 @@ export default function ReadScreen() {
         onChangeText={setMusicId}
         placeholder="Digite o ID da música"
       />
-      <Button title="Pesquisar" onPress={executa} />
-      <Button title="Listar Todas as Músicas" onPress={listarTodasMusicas} />
+      <View style={styles.buttonContainer}>
+        <Button title="Pesquisar" onPress={executa} color="#364D1F"/>
+      </View>
+      <View style={styles.buttonContainer}>
+        <Button title="Listar Todas as Músicas" onPress={listarTodasMusicas} color="#364D1F"/>
+      </View>
       {error ? <Text style={styles.error}>{error}</Text> : null}
       {viewMode === 'single' && musicDetails && (
         <View style={styles.wrapperSingleMusica}>
@@ -127,15 +130,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
     width: '80%',
   },
-  button: {
-    marginBottom: 10,
-  },
   error: {
     color: 'red',
     marginTop: 10,
   },
   wrapperSingleMusica: {
     marginTop: 20,
+    alignItems: 'center', 
   },
   allMusicTitle: {
     fontSize: 20,
@@ -148,6 +149,7 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 1,
     borderRadius: 5,
+    width: '80%', 
   },
   songTitle: {
     fontSize: 16,
@@ -155,5 +157,9 @@ const styles = StyleSheet.create({
   wrapperMusicas: {
     marginTop: 20,
     width: '100%',
+  },
+  buttonContainer: {
+    width: '80%',
+    marginBottom: 12, 
   },
 });

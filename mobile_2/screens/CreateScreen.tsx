@@ -57,7 +57,7 @@ export default function CreateScreen() {
         placeholder="ID do Álbum"
         keyboardType="numeric"
       />
-      <Button title="Adicionar" onPress={addMusica} />
+      <Button title="Adicionar" onPress={addMusica} color="#364D1F"/>
       {error ? <Text style={styles.error}>{error}</Text> : null}
       {successMessage ? <Text style={styles.success}>{successMessage}</Text> : null}
     </View>
@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: 'black',
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 8,
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   success: {
-    color: 'green',
+    color: 'black',
     marginTop: 10,
   },
 });

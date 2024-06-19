@@ -61,7 +61,7 @@ export default function UpdateScreen() {
         onChangeText={setIdAlbum}
         placeholder="ID do Álbum"
       />
-      <Button title="Atualizar" onPress={atualizaMusica} />
+      <Button title="Atualizar" onPress={atualizaMusica} color="#364D1F"/>
       {error ? <Text style={styles.error}>{error}</Text> : null}
       {successMessage ? <Text style={styles.success}>{successMessage}</Text> : null}
     </View>
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    borderColor: 'gray',
+    borderColor: 'black',
     borderWidth: 1,
     marginBottom: 12,
     paddingHorizontal: 8,
@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   success: {
-    color: 'green',
+    color: 'black',
     marginTop: 10,
   },
 });
+
